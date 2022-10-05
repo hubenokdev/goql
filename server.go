@@ -7,6 +7,8 @@ import (
 
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/playground"
+	"github.com/go-chi/chi"
+	database "github.com/hubenokdev/goql/go-graphql-hackernews/internal/pkg/db/mysql"
 	"github.com/hubenokdev/goql/graph"
 	"github.com/hubenokdev/goql/graph/generated"
 )
@@ -18,6 +20,10 @@ func main() {
 	if port == "" {
 		port = defaultPort
 	}
+
+	router := chi.NewRouter()
+
+	database.Init
 
 	srv := handler.NewDefaultServer(generated.NewExecutableSchema(generated.Config{Resolvers: &graph.Resolver{}}))
 

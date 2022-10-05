@@ -14,17 +14,9 @@ type User {
   name: String!
 }
 
-type Query {
-  todos: [Todo!]!
-}
-
 input NewTodo {
   text: String!
   userId: String!
-}
-
-type Mutation {
-  createTodo(input: NewTodo!): Todo!
 }
 
 type Link {
@@ -32,11 +24,6 @@ type Link {
   title: String!
   address: String!
   user: User!
-}
-
-type User {
-  id: ID!
-  name: String!
 }
 
 type Query {
@@ -57,7 +44,16 @@ input NewUser {
   password: String!
 }
 
+input Login {
+  username: String!
+  password: String!
+}
+
 type Mutation {
   createLink(input: NewLink!): Link!
-  createUser(input: )
+  createUser(input: NewUser!): String!
+  login(input: Login!): String!
+  #we`ll talk about this in authentication section
+  refreshToken(input: RefreshTokenInput!): String!
 }
+
