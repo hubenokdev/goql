@@ -8,6 +8,7 @@ import (
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/playground"
 	"github.com/go-chi/chi"
+	"github.com/hubenokdev/goql/internal/auth"
 	database "github.com/hubenokdev/goql/internal/pkg/db/mysql"
 
 	"github.com/hubenokdev/goql/graph"
@@ -24,9 +25,11 @@ func main() {
 
 	router := chi.NewRouter()
 
+	router.Use(auth.Middleware())
+
 	database.InitDB()
-	defer database.CloseDB()
 	database.Migrate()
+	
 	server := handler.NewDefaultServer(generated.NewExecutableSchema(generated.Config{Resolvers: &graph.Resolver{}}))
 	router.Handle("/", playground.Handler("GraphQL playground", "/query"))
 	router.Handle("/query", server)

@@ -43,6 +43,7 @@ require (
 	github.com/cockroachdb/cockroach-go/v2 v2.1.1 // indirect
 	github.com/cznic/mathutil v0.0.0-20180504122225-ca4c9f2c1369 // indirect
 	github.com/denisenkom/go-mssqldb v0.10.0 // indirect
+	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/edsrzf/mmap-go v0.0.0-20170320065105-0bce6a688712 // indirect
 	github.com/envoyproxy/go-control-plane v0.10.1 // indirect
 	github.com/envoyproxy/protoc-gen-validate v0.6.2 // indirect
@@ -141,6 +142,4 @@ require (
 	modernc.org/strutil v1.1.0 // indirect
 	modernc.org/token v1.0.0 // indirect
 	modernc.org/zappy v1.0.0 // indirect
-
-	github.com/hubenokdev/goql/go-graphql-hackernews/internal/pkg/db/migrations/mysql v1.0.0
 )
