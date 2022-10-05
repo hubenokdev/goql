@@ -4,6 +4,9 @@ go 1.18
 
 require (
 	github.com/99designs/gqlgen v0.17.20
+	github.com/go-sql-driver/mysql v1.6.0
+	github.com/golang-migrate/migrate v3.5.4+incompatible
+	github.com/golang-migrate/migrate/v4 v4.15.2
 	github.com/vektah/gqlparser/v2 v2.5.1
 )
 
@@ -20,6 +23,7 @@ require (
 	github.com/Azure/go-autorest/tracing v0.6.0 // indirect
 	github.com/ClickHouse/clickhouse-go v1.4.3 // indirect
 	github.com/agnivade/levenshtein v1.1.1 // indirect
+	github.com/anixy/hackernews v0.0.0-20220331104412-e2a84f5c1b72 // indirect
 	github.com/apache/arrow/go/arrow v0.0.0-20211013220434-5962184e7a30 // indirect
 	github.com/aws/aws-sdk-go v1.17.7 // indirect
 	github.com/aws/aws-sdk-go-v2 v1.9.2 // indirect
@@ -45,11 +49,9 @@ require (
 	github.com/form3tech-oss/jwt-go v3.2.5+incompatible // indirect
 	github.com/gabriel-vasile/mimetype v1.4.0 // indirect
 	github.com/go-chi/chi v1.5.4 // indirect
-	github.com/go-sql-driver/mysql v1.6.0 // indirect
 	github.com/go-stack/stack v1.8.0 // indirect
 	github.com/gocql/gocql v0.0.0-20210515062232-b7ef815b4556 // indirect
 	github.com/golang-jwt/jwt/v4 v4.1.0 // indirect
-	github.com/golang-migrate/migrate/v4 v4.15.2 // indirect
 	github.com/golang-sql/civil v0.0.0-20190719163853-cb61b32ac6fe // indirect
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
@@ -139,4 +141,6 @@ require (
 	modernc.org/strutil v1.1.0 // indirect
 	modernc.org/token v1.0.0 // indirect
 	modernc.org/zappy v1.0.0 // indirect
+
+	github.com/hubenokdev/goql/go-graphql-hackernews/internal/pkg/db/migrations/mysql v1.0.0
 )

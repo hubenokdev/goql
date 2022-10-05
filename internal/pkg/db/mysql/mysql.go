@@ -8,8 +8,8 @@ import (
 	"github.com/golang-migrate/migrate"
 	"github.com/golang-migrate/migrate/database/mysql"
 	_ "github.com/golang-migrate/migrate/source/file"
-	"github.com/golang-migrate/migrate/v4"
-	"github.com/golang-migrate/migrate/v4/database/mysql"
+	// "github.com/golang-migrate/migrate/v4"
+	// "github.com/golang-migrate/migrate/v4/database/mysql"
 )
 
 var Db *sql.DB
